@@ -1,0 +1,133 @@
+/* Eigen stijl van dit vak (bovenop core.css). Kleuren via variabelen of color-mix met --card, zodat licht en donker kloppen. */
+:root { --f-seq: #8b5cf6; --f-add: #3b82f6; --f-con: #ef4444; --f-cau: #f59e0b; --f-res: #10b981; --f-ex: #14b8a6; --f-op: #ec4899; --f-end: #64748b; }
+.tw-w h3 { margin: 4px 0 6px; font-size: 1.05rem; }
+.tw-w h4 { margin: 14px 0 6px; font-size: .98rem; }
+.tw-w label { font-size: 15px; }
+.tw-w input[type=text], .tw-w select { width: 100%; min-height: 44px; }
+.tw-w .chip, .tw-w .btn { min-height: 40px; }
+.okt { color: var(--good); font-weight: 700; }
+.tw-w span.nok { color: var(--bad); font-weight: 700; }
+.tw-w code { font-size: .92em; background: var(--accent-soft); border-radius: 5px; padding: 0 4px; }
+
+/* writing arena */
+.ar-top { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; position: sticky; top: 52px; z-index: 3; background: var(--card); padding: 8px 0; border-bottom: 1px solid var(--line); }
+.ar-tel { flex: 1; min-width: 0; }
+.ar-klok { text-align: right; }
+.ar-klok .row { justify-content: flex-end; flex-wrap: nowrap; }
+#arT.bijna { color: var(--oranje); }
+#arT.op { color: var(--bad); }
+.ar-bar i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; transition: width .3s; }
+.ar-bar i.ok { background: var(--good); }
+.ar-bar i.te { background: var(--bad); }
+.ar-inst { margin: 10px 0; border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
+.ar-inst summary { cursor: pointer; font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+.ar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0; }
+.ar-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.ar-grid input { width: 100%; min-height: 44px; }
+.ar-ond { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; font-size: 14px; color: var(--muted); }
+.ar-onderwerp { font-weight: 700; margin: 8px 0 4px; }
+.ar-onderwerp:empty { display: none; }
+#arTxt { min-height: 300px; line-height: 1.55; font-size: 16px; }
+ul.ar-fb { list-style: none; padding: 0; margin: 6px 0; }
+ul.ar-fb li { padding: 7px 8px 7px 30px; position: relative; border-bottom: 1px solid var(--line); font-size: 15px; }
+ul.ar-fb li:last-child { border-bottom: 0; }
+ul.ar-fb li::before { position: absolute; left: 6px; top: 7px; font-weight: 800; }
+ul.ar-fb li.ok::before { content: "✓"; color: var(--good); }
+ul.ar-fb li.nok::before { content: "!"; color: var(--bad); left: 11px; }
+ul.ar-fb li.info::before { content: "·"; color: var(--muted); left: 11px; }
+.ar-link { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.lchip, .gchip { font-size: 13px; border-radius: 99px; padding: 5px 10px; border: 1.5px solid var(--line); background: var(--card); color: var(--muted); }
+.lchip small { color: var(--muted); }
+.lchip.aan { color: var(--text); }
+.lchip.f-seq.aan, .xr-l.f-seq { background: color-mix(in srgb, var(--f-seq) 22%, var(--card)); border-color: var(--f-seq); }
+.lchip.f-add.aan, .xr-l.f-add { background: color-mix(in srgb, var(--f-add) 22%, var(--card)); border-color: var(--f-add); }
+.lchip.f-con.aan, .xr-l.f-con { background: color-mix(in srgb, var(--f-con) 20%, var(--card)); border-color: var(--f-con); }
+.lchip.f-cau.aan, .xr-l.f-cau { background: color-mix(in srgb, var(--f-cau) 24%, var(--card)); border-color: var(--f-cau); }
+.lchip.f-res.aan, .xr-l.f-res { background: color-mix(in srgb, var(--f-res) 22%, var(--card)); border-color: var(--f-res); }
+.lchip.f-ex.aan, .xr-l.f-ex { background: color-mix(in srgb, var(--f-ex) 24%, var(--card)); border-color: var(--f-ex); }
+.lchip.f-op.aan, .xr-l.f-op { background: color-mix(in srgb, var(--f-op) 20%, var(--card)); border-color: var(--f-op); }
+.lchip.f-end.aan, .xr-l.f-end { background: color-mix(in srgb, var(--f-end) 24%, var(--card)); border-color: var(--f-end); }
+
+/* toetseisen */
+.ei { margin: 8px 0; padding: 12px; }
+.ei-vb { font-style: italic; margin: 6px 0; color: var(--muted); }
+
+/* essay builder */
+.bw-slot { margin: 12px 0; }
+.bw-op { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.bw-op .chip { flex: none; font-size: 14px; white-space: nowrap; }
+.bw textarea { min-height: 64px; }
+.bw textarea.af { border-color: var(--good); }
+.b-eigen { margin-top: 6px; }
+
+/* essay X-ray */
+.xr p { line-height: 1.9; margin: 4px 0 12px; }
+.xr-akop { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); }
+.xr-rol { display: inline-block; font-size: 11px; font-weight: 700; line-height: 1.3; padding: 1px 6px; border-radius: 6px; margin-right: 4px; vertical-align: 2px; background: var(--accent-soft); color: var(--accent); }
+.xr-rol.r-topic, .xr-rol.r-thesis, .xr-rol.r-mening { background: var(--accent); color: var(--op-accent, #fff); }
+.xr-l { border: 1.5px solid; border-radius: 6px; padding: 1px 3px; cursor: pointer; }
+.xr-g { cursor: pointer; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.xr-g.g-p, .gchip.g-p { text-decoration-color: #3b82f6; border-color: #3b82f6; }
+.xr-g.g-pp, .gchip.g-pp { text-decoration-color: #10b981; border-color: #10b981; }
+.xr-g.g-c, .gchip.g-c { text-decoration-color: #ef4444; border-color: #ef4444; }
+.xr-g.g-r, .gchip.g-r { text-decoration-color: #8b5cf6; border-color: #8b5cf6; }
+.xr-g.g-m, .gchip.g-m { text-decoration-color: #f59e0b; border-color: #f59e0b; }
+.xr-g.g-cmp, .gchip.g-cmp { text-decoration-color: #ec4899; border-color: #ec4899; }
+.xr-g.g-g, .gchip.g-g { text-decoration-color: #14b8a6; border-color: #14b8a6; }
+.xr-g.g-f, .gchip.g-f { text-decoration-color: #64748b; border-color: #64748b; }
+.xr-g .xr-g { text-underline-offset: 8px; }
+.gchip { color: var(--text); border-width: 2px; }
+.xr-zoek { margin: 0 0 14px; padding-bottom: 6px; border-bottom: 1px dashed var(--line); }
+.chip.xz { line-height: 1.4; }
+.chip.xz.mis { border-style: dashed; border-color: var(--good); border-width: 2.5px; }
+
+/* sentence transformer */
+.tr-q { background: var(--accent-soft); border-radius: 12px; padding: 8px 12px; margin: 8px 0; }
+.tr-q .vraag { margin: 4px 0; }
+.tw-w .uitleg ul { margin: 4px 0; padding-left: 20px; }
+
+/* conditional machine */
+.cm-kaart { background: var(--accent-soft); border-radius: 12px; padding: 10px 12px; margin: 8px 0; font-size: 15px; }
+.cm-form { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 8px 0; }
+.cm-if, .cm-hoofd { background: var(--card); border: 1.5px solid var(--accent); border-radius: 8px; padding: 4px 8px; font-weight: 600; font-size: 14px; }
+.cm-pijl { color: var(--accent); font-weight: 800; }
+.cm-zin { font-size: 1.1rem; line-height: 2; margin: 8px 0 12px; }
+.cm-vak { display: inline-block; min-width: 70px; padding: 0 6px; border-bottom: 2.5px solid var(--accent); font-weight: 700; text-align: center; line-height: 1.5; }
+.cm-vak.sel { background: var(--accent-soft); border-radius: 6px 6px 0 0; }
+.cm-vak.goed { background: var(--good-soft); border-color: var(--good); }
+.cm-vak.fout { background: var(--bad-soft); border-color: var(--bad); }
+.cm-rij { margin: 6px 0; }
+.cm-rij .keuze { margin: 4px 0; }
+
+/* irregular verbs */
+.vw-inf { font-size: 1.3rem; margin: 4px 0 10px; }
+.vw label { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; font-size: 14px; color: var(--muted); }
+.vw input { font-size: 18px !important; }
+.vw input.goed { border-color: var(--good) !important; background: var(--good-soft) !important; }
+.vw input.fout { border-color: var(--bad) !important; background: var(--bad-soft) !important; }
+.vw-lijst { max-height: 360px; overflow: auto; margin-top: 8px; border: 1px solid var(--line); border-radius: 12px; }
+.vw-lijst table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.vw-lijst th, .vw-lijst td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.vw-lijst th { position: sticky; top: 0; background: var(--card); }
+.vw-lijst td small { color: var(--muted); }
+.vw-lijst tr.vast td:first-child { box-shadow: inset 4px 0 0 var(--good); }
+
+/* spot the mistake */
+.sp-zin { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 12px; }
+.chip.sp { font-size: 17px; padding: 8px 10px; }
+.sp-lt { font-size: 17px; margin-left: -4px; }
+
+/* formaliteitsmeter */
+.fm-meter { max-width: 260px; display: block; margin: 0 auto; }
+.fm-r, .fm-o, .fm-g { fill: none; stroke-width: 14; }
+.fm-r { stroke: var(--bad); } .fm-o { stroke: var(--oranje); } .fm-g { stroke: var(--good); }
+.fm-naald { stroke: var(--text); stroke-width: 3.5; stroke-linecap: round; transition: all .35s; }
+.fm-as { fill: var(--text); }
+.fm-zin { font-size: 1.1rem; line-height: 2.3; margin: 10px 0; }
+.fm-w { appearance: none; font: inherit; border: 1.5px solid; border-radius: 8px; padding: 3px 8px; min-height: 40px; cursor: pointer; color: var(--text); }
+.fm-w.f1 { border-color: var(--bad); background: var(--bad-soft); }
+.fm-w.f2 { border-color: var(--oranje); background: color-mix(in srgb, var(--oranje) 18%, var(--card)); }
+.fm-w.f3 { border-color: var(--good); background: var(--good-soft); }
+
+@media (prefers-reduced-motion: reduce) { .ar-bar i, .fm-naald { transition: none; } }
+.tw-w #xI { position: sticky; bottom: 8px; z-index: 2; box-shadow: var(--schaduw); border: 1px solid var(--line); }
