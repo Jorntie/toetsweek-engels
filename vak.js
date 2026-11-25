@@ -6,5 +6,7 @@ TW.vak({
   kleur: "#c0263b",
   kleurDonker: "#f08a96",
   methode: "",
+  rekenNaam: "Zelf typen",
+  rekenIcoon: "⌨️",
   toets: "Schrijftoets: essay"
 });
